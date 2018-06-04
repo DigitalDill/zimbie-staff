@@ -70,28 +70,6 @@ public class ZimbieListener implements Listener {
 		}
 	}
 	@EventHandler
-	public void onCommand(PlayerCommandPreprocessEvent e) {
-		if(e.getMessage().startsWith("/give") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/gamemode") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/gmc") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/i") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/item") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/egamemode") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/egm") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/god") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/egod") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/etp") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/ei") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/egive") && !e.getPlayer().hasPermission("zimbie.super")) { e.setCancelled(true); }
-		if(e.getMessage().startsWith("/pl") && !e.getPlayer().hasPermission("zimbie.super")) { e.getPlayer().sendMessage(plugin.tc("&fPlugins (1): &aZimbie")); e.setCancelled(true); }
-		
-		if(e.isCancelled() && !e.getMessage().startsWith("/pl")) {
-			e.getPlayer().sendMessage(plugin.tc("&cYou aren't allowed to run this command!"));
-		}
-		
-		
-	}
-	@EventHandler
 	public void onPlayerLogin(PlayerLoginEvent e) {
 		if(plugin.getServer().getBanList(Type.NAME).isBanned(e.getPlayer().getName())) {
 			e.setResult(Result.KICK_BANNED);

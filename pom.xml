@@ -4,7 +4,7 @@
 
   <groupId>com.mariouris</groupId>
   <artifactId>zimbie</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-HOTFIX</version>
   <packaging>jar</packaging>
 
   <name>zimbie</name>
