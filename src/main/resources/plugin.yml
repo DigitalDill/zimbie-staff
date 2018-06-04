@@ -1,0 +1,44 @@
+name: Zimbie
+version: ${version}
+description: Official plugin for play.zimbie.net
+author: DigiDev
+website: https://zimbie.net
+main: ${mainClass}
+
+commands:
+  staff:
+    description: Enters staff mode
+  tp:
+    description: Teleports you to a player if you are in staff mode
+  return:
+    description: Returns a player to their last teleported location
+  bring:
+    description: Brings a player to you if you are in staff mode
+  ban:
+    description: Bans a player on the server
+
+permissions:
+  zimbie.*:
+    description: Gives all Zimbie permissions to the player
+    default: op
+    children:
+      zimbie.staff: true
+      zimbie.tp: true
+      zimbie.return: true
+      zimbie.bring: true
+      zimbie.super: false
+  zimbie.staff:
+    default: false
+    description: Allows a player to enter staff mode
+  zimbie.tp:
+    default: false
+    description: Allows a player to tp to somebody
+  zimbie.return:
+    default: false
+    description: Allows returning a player to their last teleported location
+  zimbie.bring:
+    default: false
+    description: Allows a player to bring somebody to them
+  zimbie.super:
+    default: false
+    description: Allows usage of item spawning commands

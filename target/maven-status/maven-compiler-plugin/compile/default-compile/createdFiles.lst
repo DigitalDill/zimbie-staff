@@ -1,0 +1,7 @@
+com\mariouris\zimbie\commands\StaffCommand.class
+com\mariouris\zimbie\commands\TeleportCommand.class
+com\mariouris\zimbie\Main.class
+com\mariouris\zimbie\ZimbieListener.class
+com\mariouris\zimbie\commands\ReturnCommand.class
+com\mariouris\zimbie\commands\BringCommand.class
+com\mariouris\zimbie\commands\TemplateCommand.class
