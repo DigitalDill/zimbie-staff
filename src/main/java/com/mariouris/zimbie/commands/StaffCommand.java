@@ -33,10 +33,10 @@ public class StaffCommand implements CommandExecutor {
 			plugin.saveInv(plugin.getPlayer(sender));
 			plugin.getPlayer(sender).getInventory().clear();
 			for (Player player : Bukkit.getOnlinePlayers()) {
-				player.hidePlayer(plugin, plugin.getPlayer(sender));
+				player.hidePlayer(plugin.getPlayer(sender));
 				if(plugin.inStaff.containsKey(player)) {
-					player.showPlayer(plugin, plugin.getPlayer(sender));
-					plugin.getPlayer(sender).showPlayer(plugin, player);
+					player.showPlayer(plugin.getPlayer(sender));
+					plugin.getPlayer(sender).showPlayer(player);
 				}
 			}
 			plugin.getPlayer(sender).setAllowFlight(true);
@@ -53,7 +53,7 @@ public class StaffCommand implements CommandExecutor {
 			}
 			plugin.inStaff.remove(plugin.getPlayer(sender));
 			for (Player player : Bukkit.getOnlinePlayers()) {
-				player.showPlayer(plugin, plugin.getPlayer(sender));
+				player.showPlayer(plugin.getPlayer(sender));
 			}
 			sender.sendMessage(plugin.tc("&6You have left staff mode. You are no longer flying or vanished."));
 			return true;

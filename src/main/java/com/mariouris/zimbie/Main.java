@@ -61,7 +61,7 @@ public class Main extends JavaPlugin {
 			if(player.isFlying() && player.getGameMode() != GameMode.CREATIVE) { player.setFlying(false); player.setAllowFlight(false); }
 			if(inStaff.containsKey(player)) {
 				for(Player p : Bukkit.getOnlinePlayers()) {
-					p.showPlayer(this, player);
+					p.showPlayer(player);
 				}
 				restoreInv(player);
 				if(player.getGameMode() != GameMode.CREATIVE) {

@@ -4,6 +4,7 @@ import org.bukkit.BanList.Type;
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -63,7 +64,7 @@ public class ZimbieListener implements Listener {
 			if(plugin.inStaff.containsKey(p) && e.getDamager() == p) {
 				e.setCancelled(true);
 				if(e.getEntity().getType() == EntityType.PLAYER) {
-					Bukkit.getPlayer(e.getEntity().getName()).playEffect(Bukkit.getPlayer(e.getEntity().getName()).getLocation(), Effect.ANVIL_LAND, null);
+					Bukkit.getPlayer(e.getEntity().getName()).playSound(e.getEntity().getLocation(), Sound.ANVIL_LAND, 10, 29);
 					Bukkit.getPlayer(e.getEntity().getName()).sendMessage(plugin.tc("&c" + p.getName() + " just attacked you while they were in staff mode! Report this to higher-ups if you think this was on purpose."));
 				}
 			}
